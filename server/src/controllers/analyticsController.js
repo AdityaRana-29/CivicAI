@@ -53,7 +53,7 @@ const getPerformance = async (req, res) => {
     {
       $lookup: { from: 'departments', localField: '_id', foreignField: '_id', as: 'dept' },
     },
-    { $unwind: { path: '$dept', preserveNullAndEmpty: true } },
+    { $unwind: { path: '$dept', preserveNullAndEmptyArrays: true } },
     {
       $project: {
         departmentName: { $ifNull: ['$dept.name', 'General'] },

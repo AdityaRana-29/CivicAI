@@ -12,4 +12,24 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor':  ['react', 'react-dom', 'react-router-dom'],
+          'query-vendor':  ['@tanstack/react-query'],
+          'map-vendor':    ['leaflet', 'react-leaflet'],
+          'chart-vendor':  ['recharts'],
+          'motion-vendor': ['framer-motion'],
+          'ui-vendor':     ['lucide-react', 'react-hot-toast'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
+  },
+  preview: {
+    port: 4173,
+  },
 })
