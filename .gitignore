@@ -1,5 +1,7 @@
-# Dependencies
+# Dependencies - NEVER commit these
 node_modules/
+client/node_modules/
+server/node_modules/
 .pnp
 .pnp.js
 
@@ -15,38 +17,26 @@ client/.env
 dist/
 build/
 client/dist/
+server/dist/
 
 # Logs
 logs/
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # OS files
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Editor directories
-.vscode/settings.json
+# Editor
 .idea/
 *.swp
-*.swo
+.vscode/settings.json
 
 # Cache
 .cache/
-.parcel-cache/
 .eslintcache
 *.tsbuildinfo
-
-# Test coverage
-coverage/
-.nyc_output/
 
 # Misc
 *.pem
